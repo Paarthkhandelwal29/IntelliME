@@ -1,0 +1,77 @@
+body{
+    height: 95vh;
+    display: grid;
+    place-items: center;
+    background-color: #222222;
+    color: white; /* Text color for the entire page */
+    font-family: Arial, sans-serif; /* Specify your desired font-family */
+  }
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #141414;
+    height: 450px;
+    width: 400px;
+    text-align: center;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 15px;
+}
+
+.logo1 {
+    max-width: 250px; /* Adjust the maximum width of the logo */
+}
+
+.smart-text {
+    font-family: 'Open Sans', sans-serif; /* Use the Open Sans font for the text */
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Adjust the top margin for spacing */
+    display: block; /* Ensure each part of the text is on a new line */
+}
+
+.smart-text span {
+    font-weight: bold; /* Make the "SMART" part bold */
+}
+
+form {
+    align-items: center;
+    width: 250px;
+    padding-top: 20px;
+    padding-inline: 0px;
+}
+
+input {
+    width: 100%; /* Make the input fields fill the entire width of the form box */
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #000000; /* Border color for the input fields */
+    border-radius: 5px; /* Add rounded corners to the input fields */
+    background-color: #ffffff; /* Background color for the input fields */
+    color: black; /* Text color for the input fields */
+}
+
+input[type="submit"] {
+  background: rgb(87,217,170);
+  background: linear-gradient(90deg, rgba(87,217,170,0.9809173669467787) 32%, rgba(0,212,255,1) 73%);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #5F9E4F; /* Change background color on hover for the submit button */
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #515151; /* Link color */
+    text-decoration: none; /* Remove underlines */
+}
+
+.forgot-password a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+  
+  
