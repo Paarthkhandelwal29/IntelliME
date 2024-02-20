@@ -24,7 +24,7 @@ function validateForm() {
     // Check if the entered password is the required one for redirection
     if (password === "PaarthK@29") {
         // Redirect to the dashboard page (replace with the actual dashboard URL)
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
         return false; // Prevent form submission since we're redirecting
     } else {
         // Show an error message for incorrect passwords

@@ -1,195 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <nav class="mainMenu">
-        <div class="logoBar">
-            <img src="HERO-LOGO-3_1-removebg-preview.png" class="logo" alt="Logo">
-        </div>
-        <div class="menu">
-          <h2 class="menuHeading">MENU</h2>
-          <ul class="optionsMenu">
-            <li class="menu-item active">
-              <a href="#"><i class="fas fa-tachometer-alt"></i> Overview</a>
-            </li>
-            <li class="menu-item">
-              <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
-            </li>
-            <li class="menu-item">
-              <a href="#"><i class="fas fa-box-open"></i> E-chalan Issued</a>
-            </li>
-            <li class="menu-item">
-              <a href="#"><i class="fas fa-shopping-cart"></i> Insurance Information</a>
-            </li>
-            <li class="menu-item">
-              <a href="#"><i class="fas fa-exchange-alt"></i> Vehicle Information</a>
-            </li>
-            <li class="menu-item">
-              <a href="#"><i class="fas fa-file-alt"></i> Customer Reports</a>
-            </li>
-          </ul>
-          <h2 class="menuHeading">OTHER</h2>
-          <ul class="otherMenu">
-            <li class="menu-item">
-              <a href="#"><i class="fas fa-cog"></i> Settings</a>
-            </li>
-            <li class="menu-item">
-              <a href="#"
-                > Help & Support</a
-              >
-            </li>
-          </ul>
-          <div class="usertag">
-            <div class="icon">
-              <img src="Ellipse 2.png">
-            </div>
-            <div class="naming">
-              <h4>Paarth Khandelwal</h4>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <main>
-        <div class="dashboard101">
-          <div class="dashboard-overview-head">
-            <h1 class="dashboard-overview-title">Dashboard Overview</h1>
-            <div class="search-container">
-                <form id="search-button" action="#">
-                  <input type="text" placeholder="Search" name="search">
-                </form>
-              </div>
-          </div>
-        </div>
-        <section class="dashboard-overview">
-          <div class="card revenue">
-            <div class="card-data">
-              <h3>Service Cycle</h3>
-              <p class="amount">10/Year</p>
-              <p class="change">
-                 <span class="badge-green">+5%</span> from last year
-              </p>
-            </div>
-            <canvas class="canv" id="revenue-chart"></canvas>
-          </div>
-          <div class="card orders">
-            <div class="card-data">
-              <h3>Driver's Score</h3>
-              <p class="amount">75/100%</p>
-              <p class="change">
-                 <span class="badge-red">-4%</span> from yesterday
-              </p>
-            </div>
-            <canvas class="canv" id="orders-chart"></canvas>
-          </div>
-          <div class="card visitors">
-            <div class="card-data">
-              <h3>Total Distance Covered</h3>
-              <p class="amount">1058 KM</p>
-              <p class="change">
-                <span class="badge-green">+3%</span> from last year
-              </p>
-            </div>
-            <canvas class="canv" id="visitors-chart"></canvas>
-          </div>
-        </section>
-        <section class="analytics-sections">
-        <section class="sales-analytics">
-          <div class="card1">
-            <div class="filter">
-              <h2>Vehicle Performance</h2>
-              <button class="filter-button active">Daily</button>
-              <button class="filter-button">Weekly</button>
-              <button class="filter-button">Monthly</button>
-              <button class="filter-button">Yearly</button>
-            </div>
-            <div class="graph-container">
-              <canvas id="sales-chart"></canvas>
-            </div>
-          </div>  
-        </section>
-        <section class="returns">
-          <div class="card1">
-            <h2>Driver's Score</h2>
-            <div class="graph-container">
-              <canvas id="returns-chart"></canvas>
-            </div>
-          </div>
-        </section>
-        </section>
-        <section class="best-selling-products">
-          <div class="comp-header">
-            <h2>Daily Customer Report</h2>
-            <div class="filter">
-              <select id="filter-by">
-                <option value="" disabled selected>Filter by</option>
-                <option value="all">All</option>
-                <option value="in-stock">Product ID</option>
-                <option value="out-of-stock">Driver Mode</option>
-                <option value="restock">Distance Covered</option>
-              </select>
-              <select id="sort-by">
-                <option value="" disabled selected>Sort by</option>
-                <option value="relevance">Relevance</option>
-                <option value="price-asc">Low to High</option>
-                <option value="price-desc">High to Low</option>
-              </select>
-            </div>
-          </div>
-          <table class="product-list">
-            <thead>
-              <tr>
-                <th>Product ID</th>
-                <th>DRIVER MODE</th>
-                <th>CUSTOMER NAME</th>
-                <th>VEHICLE LIFE</th>
-                <th>DISTANCE COVERED</th>
-                <th>DAMAGE CAUSED</th>
-                <th>DRIVER SCORE</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>#02598</td>
-                <td>Guest</td>
-                <td>Unknown</td>
-                <td>8 Years</td>
-                <td>48,000 KM</td>
-                <td>25%</td>
-                <td><spam class="badge-red">BAD</spam></td>
-              </tr>
-              <tr>
-                <td>#02587</td>
-                <td>Admin</td>
-                <td>Paarth Khandelwal</td>
-                <td>5 Years</td>
-                <td>76,900 KM</td>
-                <td>0%</td>
-                <td>
-                  <spam class="badge-green">GOOD</spam>
-                </td>
-              </tr>
-              <tr>
-                <td>#00202</td>
-                <td>User-1</td>
-                <td>Family Member</td>
-                <td>3 Years</td>
-                <td>₹32,900</td>
-                <td>3%</td>
-                <td>
-                  <spam class="badge-orange">AVERAGE</spam>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </main>
-    </div>
-  </body>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="validation.js"></script>
+</head>
+<body>
+<div class="login-container">
+    <img src="HERO-LOGO-3_1-removebg-preview.png" alt="Logo" class="logo1">
+    <form name="myForm" action="/submit_form" onsubmit="return validateForm()" method="post">
+        <input type="text" name="username" placeholder="Username">
+        <br>
+        <input type="password" name="password" placeholder="Password">
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <p class="forgot-password"><a href="#">Forgot your password?</a></p>
+</div>
+
+</body>
 </html>
